@@ -1,0 +1,337 @@
+/* General Styles */
+.App {
+  text-align: center;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f4f4f9; /* Light background for contrast */
+}
+
+/* Navigation Styles */
+nav {
+  margin: 0;
+  width: 100%;
+  height: 80px;
+  background-color:#202121; /* Main nav color */
+  display: flex;
+  justify-content: flex-start; /* Align contents to the left */
+  align-items: center;
+  color: white;
+  padding: 0 20px; /* Add padding for spacing */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for effects */
+}
+
+nav:hover {
+  background-color:  #141617;  /* Slightly lighter shade on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px; /* Adjusted margin */
+  font-size: 20px; /* Font size */
+  position: relative; /* Position for underline effect */
+  transition: color 0.3s; /* Smooth color transition */
+  transform: scale(1.1);
+}
+
+nav a:hover {
+  color: #ffd700; /* Gold color on hover */
+  transform: scale(1.1);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px; /* Position the underline */
+  left: 50%;
+  background-color: #ffd700; /* Match hover color */
+  transition: width 0.3s, left 0.3s; /* Smooth transition */
+}
+
+nav a:hover::after {
+  width: 100%; /* Full width on hover */
+  left: 0;
+}
+
+nav button {
+  background-color: #f0ad4e; /* Premium button color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for spacing */
+  color: white; /* Text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+  margin-left: 15px; /* Space from links */
+}
+
+nav button:hover {
+  background-color: #ec971f; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+nav button:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* Optional focus effect */
+}
+
+.logout-btn {
+  background-color: #f0ad4e; /* Premium button color */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s, transform 0.3s; /* Add transition for smooth effects */
+  margin-left: auto; /* Move logout button to the right */
+}
+
+.logout-btn:hover {
+  background-color: #ec971f; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Create Post Page Styles */
+.createPostPage {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: grid;
+  place-items: center;
+}
+
+.cpContainer {
+  width: 500px;
+  height: auto;
+  padding: 20px;
+  background-color:#141617;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.cpContainer h1 {
+  text-align: center;
+}
+
+.cpContainer label {
+  font-size: 25px;
+}
+
+.cpContainer .inputGp {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGp input,
+.inputGp textarea {
+  font-size: 18px;
+  border: none;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.inputGp input {
+  height: 40px;
+  border-radius: 5px;
+}
+
+.inputGp textarea {
+  height: 150px;
+  border-radius: 5px;
+}
+
+.cpContainer button {
+  margin-top: 20px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: #f0ad4e; /* Default background color */
+  color: white; /* Text color */
+  transition: background-color 0.3s, transform 0.2s; /* Transition for background and scaling */
+}
+
+.cpContainer button:hover {
+  background-color: #ec971f; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.cpContainer button:active {
+  transform: scale(0.95); /* Slightly shrink on click */
+}
+
+input,
+textarea {
+  margin-top: 5px;
+}
+
+/* Login Page Styles */
+.loginPage {
+  width: 100vw;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginPage p {
+  font-size: 30px;
+}
+
+/* Google Button Styles */
+.login-with-google-btn {
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  padding: 6px 18px 12px 42px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+  color: #757575;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background-color: white;
+  background-image: url('https://developers.google.com/identity/images/g-logo.png');
+  background-repeat: no-repeat;
+  background-size: 25px; /* Set logo size */
+  background-position: 6px center; /* Move logo slightly to the left */
+  display: flex; /* Flexbox for better alignment */
+  align-items: center; /* Center align items vertically */
+}
+
+.login-with-google-btn span {
+  margin-left: 10px; /* Increased space between image and text */
+}
+
+.login-with-google-btn:hover {
+  box-shadow: 0 2px 4px rgba(8, 2, 2, 0.2);
+}
+
+.login-with-google-btn:active {
+  background-color: #eeeeee;
+}
+
+.login-with-google-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #c8dafc;
+}
+
+.login-with-google-btn:disabled {
+  filter: grayscale(100%);
+  background-color: #ebebeb;
+  cursor: not-allowed;
+}
+
+/* Home Page Styles */
+.homePage {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.homePage .post {
+  width: 600px;
+  height: auto;
+  max-height: 600px;
+  background-color: rgb(250, 250, 250);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.post .postHeader {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.postHeader .title {
+  flex: 50%;
+}
+.postHeader .deletePost {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.deletePost button {
+  border: none;
+  background: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #ff0000; /* Red color for delete action */
+  transition: transform 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+.deletePost button:hover {
+  color: #ff4d4d; /* Lighter red on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.deletePost button:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.5); /* Optional focus effect */
+}
+
+.post .postTextContainer {
+  word-wrap: break-word;
+  height: auto;
+  max-height: 400px;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  
+}
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .cpContainer {
+    width: 90%; /* Full width on mobile */
+    justify-items: center;
+    margin-left: 18px;
+
+    
+
+    
+  }
+  .loginPage {
+    height: auto;
+    padding: 40px 20px; /* More padding for smaller screens */
+  }
+
+  .homePage .post {
+    width: 90%;
+    margin: 10px;
+
+  }
+  nav a {
+    font-size: 16px; /* Smaller font size */
+    margin: 0 10px;
+  }
+  .nav .logout-btn {
+    font-size: 18px;
+  }
+}
